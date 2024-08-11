@@ -14,7 +14,14 @@
 
       font-family: Arial, Helvetica, sans-serif;
     }
-
+#preloader{
+    background: white url(loader.gif) no-repeat center center;
+    height: 100vh;
+    background-size: 15%;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+}
     .div1 h1 {
       text-align: center;
       margin-top: 10px;
@@ -52,7 +59,7 @@
 </head>
 
 <body>
-
+  <div id="preloader"></div>
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid nav1">
       <img src="https://t4.ftcdn.net/jpg/07/04/76/99/360_F_704769948_5uA6RBsdONoOjh9WJmG4Jq3WE9SzIjN5.jpg" alt=""
@@ -210,7 +217,14 @@
             .then(json=>console.table(json))
       }
 
-    
+      <script>
+
+var loader = document.getElementById("preloader");
+window.addEventListener("load",function(){
+  loader.style.display = "none"
+})
+
+  </script>
   </script>
 
 
